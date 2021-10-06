@@ -1,0 +1,31 @@
+1) To run the c++ program you will need g++ complier. This program was ran on the following version:
+
+Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/4.2.1
+Apple clang version 13.0.0 (clang-1300.0.29.3)
+Target: x86_64-apple-darwin20.6.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+
+2) You need to unzip the file and then run the following command from the unzipped folder.
+
+  g++ -std=c++17 *.cpp -o a.out
+
+3) After the above command you can run:
+
+  ./a.out
+
+This will ask for the inputs from the standard input device.
+
+Note: This program was compiled with c++17.
+
+Assumptions:
+1) The system storage can only be in MB or GB.
+2) The total number of blocks as well as bytes can only be a valid integer.
+
+Functionality:
+1) Saving/Reading a file returns a starting pointer to the block from where it
+stores the file data and the number of blocks used from there. I also print the data to 
+see that file data storage.
+2) Delete simple frees the memory and update the doubly linked list pointers for others
+blocks in the memory.
+
